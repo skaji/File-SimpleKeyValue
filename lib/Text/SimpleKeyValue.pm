@@ -32,14 +32,7 @@ Text::SimpleKeyValue - text based simple key value format
 =head1 DESCRIPTION
 
 Text::SimpleKeyValue is a text based simple key value format.
-It looks like:
-
-   key1
-     value line1
-     value line2
-   key2
-     value line1
-   ...
+An example is here L<sample-kv.txt|https://gist.github.com/skaji/c0bf8f83eb50bb1e63bb426b7ae98885>.
 
 =head1 MOTIVATION
 
