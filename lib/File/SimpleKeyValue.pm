@@ -11,7 +11,7 @@ __END__
 
 =head1 NAME
 
-File::SimpleKeyValue - file based simple key value format
+File::SimpleKeyValue - plain file based simple key value format
 
 =head1 SYNOPSIS
 
@@ -29,7 +29,7 @@ File::SimpleKeyValue - file based simple key value format
 
 =head1 DESCRIPTION
 
-File::SimpleKeyValue is a text based simple key value format.
+File::SimpleKeyValue is a plain file based simple key value format.
 An example is here L<sample-kv.txt|https://gist.github.com/skaji/c0bf8f83eb50bb1e63bb426b7ae98885>.
 
 =head1 MOTIVATION

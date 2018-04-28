@@ -3,7 +3,7 @@
 
 # NAME
 
-File::SimpleKeyValue - file based simple key value format
+File::SimpleKeyValue - plain file based simple key value format
 
 # SYNOPSIS
 
@@ -21,7 +21,7 @@ File::SimpleKeyValue - file based simple key value format
 
 # DESCRIPTION
 
-File::SimpleKeyValue is a text based simple key value format.
+File::SimpleKeyValue is a plain file based simple key value format.
 An example is here [sample-kv.txt](https://gist.github.com/skaji/c0bf8f83eb50bb1e63bb426b7ae98885).
 
 # MOTIVATION
