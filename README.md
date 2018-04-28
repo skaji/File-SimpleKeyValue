@@ -1,4 +1,5 @@
 [![Build Status](https://travis-ci.org/skaji/File-SimpleKeyValue.svg?branch=master)](https://travis-ci.org/skaji/File-SimpleKeyValue)
+[![AppVeyor Status](https://ci.appveyor.com/api/projects/status/github/skaji/File-SimpleKeyValue?branch=master&svg=true)](https://ci.appveyor.com/project/skaji/File-SimpleKeyValue)
 
 # NAME
 
