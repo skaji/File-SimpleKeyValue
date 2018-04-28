@@ -1,4 +1,4 @@
-package Text::SimpleKeyValue::Reader;
+package File::SimpleKeyValue::Reader;
 use strict;
 use warnings;
 
@@ -13,7 +13,7 @@ sub new {
     bless { fh => $fh }, $class;
 }
 
-sub keys {
+sub keys :method {
     my $self = shift;
     my $fh = $self->{fh};
     seek $fh, 0, 0;
@@ -39,8 +39,7 @@ sub get {
         if (my ($key) = $line =~ /^(\S.*)/) {
             if ($key eq $want) {
                 my @value;
-                VALUE_LINE:
-                while (my $line = <$fh>) {
+                VALUE_LINE: while (my $line = <$fh>) {
                     if ($line =~ /^  (.*)/) {
                         push @value, $1;
                     } else {

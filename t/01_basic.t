@@ -3,16 +3,17 @@ use warnings;
 use Test::More;
 use File::Temp ();
 
-use Text::SimpleKeyValue::Writer;
-use Text::SimpleKeyValue::Reader;
+use File::SimpleKeyValue::Writer;
+use File::SimpleKeyValue::Reader;
 
 my ($fh, $file) = File::Temp::tempfile UNLINK => 1;
 
-my $writer = Text::SimpleKeyValue::Writer->new(fh => $fh);
+my $writer = File::SimpleKeyValue::Writer->new(fh => $fh);
 $writer->write(key1 => "aaa\nbbb\n");
 $writer->write('key2 xxx yyy'  => "ccc\nddd\n\neee");
+close $fh;
 
-my $reader = Text::SimpleKeyValue::Reader->new(file => $file);
+my $reader = File::SimpleKeyValue::Reader->new(file => $file);
 my @key = $reader->keys;
 is @key, 2;
 is $key[0], "key1";

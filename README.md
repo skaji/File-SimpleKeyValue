@@ -1,28 +1,26 @@
-[![Build Status](https://travis-ci.org/skaji/Text-SimpleKeyValue.svg?branch=master)](https://travis-ci.org/skaji/Text-SimpleKeyValue)
+[![Build Status](https://travis-ci.org/skaji/File-SimpleKeyValue.svg?branch=master)](https://travis-ci.org/skaji/File-SimpleKeyValue)
 
 # NAME
 
-Text::SimpleKeyValue - text based simple key value format
+File::SimpleKeyValue - file based simple key value format
 
 # SYNOPSIS
 
-    use Text::SimpleKeyValue::Writer;
-    use Text::SimpleKeyValue::Reader;
+    use File::SimpleKeyValue::Writer;
+    use File::SimpleKeyValue::Reader;
 
-    my $writer = Text::SimpleKeyValue::Writer->new(file => "kv.txt");
-    my $command = "perl -V";
-    my $stdout  = `$command`;
-    $writer->write(command => $command);
-    $writer->write(stdout  => $stdout);
+    my $writer = File::SimpleKeyValue::Writer->new(file => "kv.txt");
+    $writer->write(key1 => "value1");
+    $writer->write(key2 => "value2");
 
-    my $reader = Text::SimpleKeyValue::Reader->new(file => "kv.txt");
-    my @key = $reader->keys; # ('command', 'stdout')
-    $reader->get("command"); # $command
-    $reader->get("stdout");  # $stdout
+    my $reader = File::SimpleKeyValue::Reader->new(file => "kv.txt");
+    my @key = $reader->keys;           # ("key1", "key2")
+    my $value1 = $reader->get("key1"); # "value1"
+    my $value2 = $reader->get("key2"); # "value2"
 
 # DESCRIPTION
 
-Text::SimpleKeyValue is a text based simple key value format.
+File::SimpleKeyValue is a text based simple key value format.
 An example is here [sample-kv.txt](https://gist.github.com/skaji/c0bf8f83eb50bb1e63bb426b7ae98885).
 
 # MOTIVATION
